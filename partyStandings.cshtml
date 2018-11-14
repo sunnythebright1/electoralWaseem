@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ElectoralSystem.Models.Candidate>
+
+@{
+    ViewBag.Title = "partyStandings";
+}
+
+<h2>partyStandings</h2>
+
+@{
+    var myChart = new Chart(width: 900, height: 600, theme: ChartTheme.Blue)
+        .AddTitle("Chart Title")
+        .AddSeries(
+            name: "ChartTitle",
+            xValue: new[] { "PTI", "PML(N)", "PPP(P)", "MQM(P)", "Others" },
+            yValues: new[] { "500700", "323541", "320000", "258999","220000" })
+        .Write();
+}
+
+@*
+@{
+    var myChart = new Chart(width: 600, height: 400, theme: ChartTheme.Green)
+        .AddTitle("Chart Title")
+        .AddSeries(
+            name: "ChartTitle",
+            chartType: "Pie",
+            xValue: new[] { "Col1", "Col2", "Col3", "Col4", "Col5" },
+            yValues: new[] { "2", "6", "4", "5", "3" })
+        .Write();
+}
+@*
+    
+@{
+    var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Chart Title")
+        .AddSeries(
+            name: "ChartTitle",
+            chartType: "Pie",
+            xValue: new[] { "Col1", "Col2", "Col3", "Col4", "Col5" },
+            yValues: new[] { "2", "6", "4", "5", "3" })
+        .Write();
+}
+@*
+@{
+    var db = Database.Open("DBName");
+    var data = db.Query("SELECT Col1, Col2 FROM Table");
+    var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Chart Title")
+        .DataBindTable(dataSource: data, xField: "Col1")
+        .Write();
+}
+
+<html>
+<body>
+    <img src="MyChart.cshtml" />
+    <!-- or <img src='@Url.Action("Controler","ActionNameOfChartRenderingView")' />-->
+    <body>
+        <html>
+    *@

@@ -1,0 +1,37 @@
+﻿@model ElectoralSystem.Models.Candidate
+
+@{
+    ViewBag.Title = "withdrawalRequest";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<h2>Request for Withdrawal from Your Constituency @Model.assemblyType &nbsp; @Model.assemblyNo</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <div class="alert alert-info">
+        <strong>Constituency Withdrawal Request</strong> If you want to withdraw from your current constituency, You can submit a request online below with Details/Explanation.
+        <br />
+        <br />
+        <textarea rows="4" cols="100" name="reason" placeholder="    Please write your detailed reason here for withdrawal. (It is also acknowledgement that you're willing to withdraw from your constituency at your own will!)">
+        
+        </textarea>
+    </div>
+    <div class="alert alert-danger">
+        <input type="button" name="Withdraw" value="Withdraw"/>
+    </div>
+    <dl class="dl-horizontal">
+        <dt>
+        </dt>
+
+        <dd>
+        </dd>
+
+    </dl>
+</div>
+<p>
+   
+</p>

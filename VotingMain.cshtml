@@ -1,0 +1,33 @@
+﻿@model ElectoralSystem.Models.Voter
+
+@{
+    <title>Voting Page</title>
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/voter.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<h2>Cast your Vote here</h2>
+<h1>Voter Details</h1>
+@{ 
+    if (Model == null)
+    {
+        <h1> You are not registered to vote! Please Contact ECP</h1>
+    }
+    else
+    {
+        <h1>NIC : @Model.NIC</h1>
+        <h1>Name : @Model.Name</h1>
+        
+        <h1>
+            Voter Block Code : @Model.areaCode <br />
+            Area: @Model.Area <br />
+            City : @Model.City <br />
+            NA # @Model.naNo <br />
+            Provincial :  @Model.assemblyAlias &nbsp; @Model.areaCode
+
+        </h1>
+        <h3 style="font-size:large; color:green; margin-left: 500px"> // Candidates, Party and Voting information here </h3>
+    }
+}
+

@@ -1,0 +1,35 @@
+﻿@model ElectoralSystem.Models.Candidate
+
+@{
+    ViewBag.Title = "cResults";
+}
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/candidate.css" rel="stylesheet" />
+<body style="background-color:white; background-position:370px 250px;"></body>
+<h2>Constituency Results</h2>
+    <table class="table table-active" style="margin-top:100px">
+    <tr>
+        <th>
+            Candidancy No
+        </th>
+        <th>Candidate Name</th>
+        <th>Contesting Party</th>
+        <th>Contesting Constituency Area</th>
+        <th>Assembly</th>
+        <th>No Of Polling Counters</th>
+        <th>Votes Gained</th>
+    </tr>
+    <tr>
+        <td>@Model.CandidateNo</td>
+        <td>@Model.Name</td>
+        <td>@Model.partyName</td>
+        <td>@Model.Area</td>
+        <td>@Model.assemblyType &nbsp; @Model.assemblyNo</td>
+            <td>@Model.pollingCounters</td>
+            <td>@Model.voteCount</td>
+        </tr>
+    </table>
+   
+

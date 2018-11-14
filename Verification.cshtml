@@ -1,0 +1,55 @@
+﻿@using ElectoralSystem.Models
+
+<html>
+<head>
+    
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+   
+    <link href="~/Content/voter.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Voter Verification 2/3</title>
+    <meta charset="UTF-8">
+    <script>
+	  function myFunc()
+	  {
+		  document.getElementById("demo").style.backgroundColor = "green";
+		  return false;
+	  }
+
+	  function myFunc2()
+	  {
+		  document.getElementById("demo2").style.backgroundColor = "green";
+		  return true;
+	  }
+    </script>
+</head>
+<body>
+
+    <form action="abc" />
+    <h1 style="color:green;" >&nbsp; &nbsp; &nbsp; Welcome @TempData["Name"] </h1>
+    <h1>Verification</h1>
+   
+    <label for="Thumb">Press Your Right Thumb and press Verify</label>
+    &nbsp;&nbsp;
+    <button id="demo" onClick="myFunc()" style="font-size:24px">Verify<i class="material-icons">fingerprint</i></button>
+    &nbsp;&nbsp;&nbsp;
+    <i class="material-icons" style="font-size:88px;color:red">fingerprint</i>
+    <br>
+    <label for="Camera">Look Straight At Camera and press Verify</label>
+    &nbsp;&nbsp;&nbsp;
+    <button style="font-size:24px"  onClick="myFunc2()">Verify<i class="material-icons">face</i></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <i class="material-icons" style="font-size:88px;color:red">face</i>
+    <input type="submit" value="Proceed"  />
+
+    </br>
+
+    </form>
+
+
+</body>
+
+</html>
